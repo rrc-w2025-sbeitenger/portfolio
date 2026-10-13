@@ -10,7 +10,10 @@ function Home(){
 
      return(
         <div className="flex min-h-svh items-center justify-center bg-taupe-300 px-4 py-12 sm:px-8 sm:py-20">
-            <Window title="home">
+            <Window
+            title="home"
+            draggable={false}
+            >
                 
                     <div className="flex min-h-[420px] flex-col items-center justify-center px-4 py-16 text-center sm:min-h-[558px] sm:px-10 sm:py-24">
                         <h1 className="font-troika text-5xl leading-tight font-bold text-zinc-800 sm:text-7xl lg:text-[80px]">Hello!
