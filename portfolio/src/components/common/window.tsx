@@ -1,22 +1,24 @@
+import { Rnd } from 'react-rnd';
 import type { ReactNode } from "react";
 
 type WindowProps = {
     title: string;
     children: ReactNode;
-    onClose?: () => void 
+    onClose?: () => void;
+    draggable?: boolean;
 };
 
-function Window({title, children, onClose}: WindowProps){
-    return(
-        <div className="w-full max-w-[800px]">
+function Window({title, children, onClose, draggable=true}: WindowProps){
+
+    const content = (
             <div className="overflow-hidden rounded-xl border border-zinc-400 bg-white shadow-[0_5px_0_rgba(0,0,0,0.15)]">
-                <div className="flex h-13 items-center border-b border-zinc-400 bg-zinc-800 px-6 text-xl text-stone-200">
+                <div className="window-header flex h-13 items-center border-b border-zinc-400 bg-zinc-800 px-6 text-xl text-stone-200">
                     {title}
                     {onClose && (
                         <button
                             type="button"
                             onClick={onClose}
-                            className="ml-auto flex size-9 cursor-pointer items-center justify-center rounded-full hover:bg-red-600 focus-visible:outline-2 focus-visible:outline-white"
+                            className="absolute font-mono flex items-center justify-center text-white text-xl right-0 mr-6 duration-100 hover:scale-110 active:scale-80 z-10 hover:text-red-500"
                         >
                             [x]
                         </button>
@@ -24,7 +26,32 @@ function Window({title, children, onClose}: WindowProps){
                 </div>
                 {children}
             </div>
-        </div>
+    )
+
+    if (!draggable){
+        return(
+            <div className="mx-auto h-full w-full max-w-[800px]">
+                {content}
+            </div>
+        )
+    }
+
+    return (
+        <Rnd
+            //default={{
+            //    x: 100,
+            //    y: 100,
+            //    width: 800,
+            //    height: "auto"
+            //}}
+            maxWidth={800}
+            bounds="window"
+            dragHandleClassName="window-header"
+            cancel=".no-drag"
+            enableResizing={false}
+        >
+            {content}
+        </Rnd>
     );
 }
 
