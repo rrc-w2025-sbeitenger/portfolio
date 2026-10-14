@@ -1,0 +1,10 @@
+@font-face{
+    font-family: Troika;
+    src: url("../src/assets/fonts/troika.otf") format('opentype');
+}
+
+@import "tailwindcss";
+
+@theme{
+    --font-troika: Troika, "sans-serif";
+}
