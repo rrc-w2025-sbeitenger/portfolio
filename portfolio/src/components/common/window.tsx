@@ -38,12 +38,12 @@ function Window({title, children, onClose, draggable=true}: WindowProps){
 
     return (
         <Rnd
-            //default={{
-            //    x: 0,
-            //    y: 0,
-            //    width: "auto",
-            //    height: "auto"
-            //}}
+            default={{
+                x: 0,
+                y: -200,
+                width: "auto",
+                height: "auto"
+            }}
             maxWidth={960}
             bounds="window"
             dragHandleClassName="window-header"

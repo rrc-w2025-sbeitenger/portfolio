@@ -4,7 +4,7 @@ function Projects({onClose}: { onClose: () => void}) {
     return (
         // //! UPDATE WITH MAP LATER TO REDUCE REPETITION!!
         <Window title="projects" onClose={onClose}>
-            <section className="w-[90vw] max-w-[960px] h-[420px] sm:h-[558px] overflow-y-auto space-y-8 px-6 py-8 text-zinc-700 sm:px-8">
+            <section className="w-[90vw] max-w-[960px] h-[500px] sm:h-[558px] overflow-y-auto space-y-8 px-6 py-8 text-zinc-700 sm:px-8">
                 <section className="space-y-4">
                     <h3 className="border-b border-purple-100 pb-2 text-xl font-bold text-purple-700">Technical Skills</h3>
                     <div className="space-y-3">
