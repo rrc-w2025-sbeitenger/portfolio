@@ -1,8 +1,16 @@
 import Window from "../../common/window";
 
 function Projects({onClose}: { onClose: () => void}) {
+    const languages = ['TypeScript', 'JavaScript', 'Python', 'HTML/CSS', 'Tailwind CSS', 'SQL']
+    const mainTechs = ['Git', 'GitHub', 'Postman', 'Pandas', 'AWS', 'Docker', 'Render', 'React', 'Linux',
+                        'Windows', 'Firebase', 'Tailwind CSS', 'Oracle VirtualBox', 'Node.js', 'Express.js', 'Figma', 'Vercel',
+                        'MongoDB', 'Kubernetes']
+    const marathonTechs = ['TypeScript', 'Node.js', 'Express.js', 'Firebase', 'Firestore', 'Render']
+    const bankingTechs = ['Python', 'PySide6', 'Object-Oriented Programming', 'Design Patterns']
+    const formulaOneTechs = ['React', 'TypeScript', 'CSS', 'HTML', 'Vite']
+    const profolioTechs = ['React', 'TypeScript', 'Tailwind CSS', 'React-rnd']
+
     return (
-        // //! UPDATE WITH MAP LATER TO REDUCE REPETITION!!
         <Window title="projects" onClose={onClose}>
             <section className="w-[90vw] max-w-[960px] h-[500px] sm:h-[558px] overflow-y-auto space-y-8 px-6 py-8 text-zinc-700 sm:px-8">
                 <section className="space-y-4">
@@ -10,33 +18,17 @@ function Projects({onClose}: { onClose: () => void}) {
                     <div className="space-y-3">
                         <h4 className="font-semibold">Languages</h4>
                         <ul className="flex flex-wrap gap-3">
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Python</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">TypeScript</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">JavaScript</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Java</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">HTML/CSS</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Tailwind CSS</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">SQL</li>
+                            {languages.map((language) => (
+                                <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">{language}</li>
+                            ))}
                         </ul>
                     </div>
                     <div className="space-y-3">
                         <h4 className="font-semibold">Technologies / Frameworks</h4>
                         <ul className="flex flex-wrap gap-3">
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Git</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">GitHub</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Postman</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Pandas</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">AWS</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Docker</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Render</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">React</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Linux</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Oracle VirtualBox</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Node.js</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Express.js</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Figma</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Vercel</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">MongoDB</li>
+                            {mainTechs.map((tech) => (
+                                <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">{tech}</li>
+                            ))}
                         </ul>
                     </div>
                 </section>
@@ -72,12 +64,9 @@ function Projects({onClose}: { onClose: () => void}) {
                                 Firebase Authentication, and Cloud Firestore integration.
                             </p>
                             <ul aria-label="Marathon API" className="flex flex-wrap gap-2 text-sm">
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">TypeScript</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Node.js</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Express.js</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Firebase</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Firestore</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Render</li>
+                                {marathonTechs.map((tech) => (
+                                    <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">{tech}</li>
+                                ))}
                             </ul>
                         </div>
                     </article>
@@ -100,10 +89,9 @@ function Projects({onClose}: { onClose: () => void}) {
                                 applying object-oriented programming principles and software design patterns.
                             </p>
                             <ul aria-label="Banking Management App" className="flex flex-wrap gap-2 text-sm">
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Python</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">PySide6</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Object-Oriented Programming</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Design Patterns</li>
+                                {bankingTechs.map((tech) => (
+                                    <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">{tech}</li>
+                                ))}
                             </ul>
                         </div>
                     </article>
@@ -126,11 +114,9 @@ function Projects({onClose}: { onClose: () => void}) {
                                 management features using TypeScript and reusable components.
                             </p>
                             <ul aria-label="Formula One Web App" className="flex flex-wrap gap-2 text-sm">
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">React</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">TypeScript</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">HTML</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">CSS</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Vite</li>
+                                {formulaOneTechs.map((tech) => (
+                                    <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">{tech}</li>
+                                ))}
                             </ul>
                         </div>
                     </article>
@@ -153,9 +139,9 @@ function Projects({onClose}: { onClose: () => void}) {
                                 draggable windows, and responsive layouts, because I thought it would be interesting!
                             </p>
                             <ul aria-label="Portfolio website" className="flex flex-wrap gap-2 text-sm">
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">TypeScript</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Tailwind CSS</li>
-                                <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">react-rnd</li>
+                                {profolioTechs.map((tech) => (
+                                    <li className="bg-purple-50 px-3 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">{tech}</li>
+                                ))}
                             </ul>
                         </div>
                     </article>
