@@ -1,9 +1,9 @@
-import Window from "../../common/window";
+import Window from "../../common/Window";
 import Nav from "../../common/Nav"
 import Footer from "../../common/Footer";
-import ActivePage from "../../common/activePage";
-import {Howl} from 'howler';
-import type { Page } from "../../common/activePage";
+import ActivePage from "../../common/ActivePage";
+import { Howl } from 'howler';
+import type { Page } from "../../common/ActivePage";
 import { useState } from "react";
 
 function Home(){
@@ -14,7 +14,7 @@ function Home(){
         volume: 0.5,
         html5: true,
         preload: true
-    })
+    });
 
      return(
         <div className="flex min-h-svh items-center justify-center px-4 py-12 sm:px-8 sm:py-20">
@@ -49,6 +49,6 @@ function Home(){
             
         </div>
     );
-}
+};
 
 export default Home;
