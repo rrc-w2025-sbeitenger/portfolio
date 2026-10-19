@@ -1,4 +1,4 @@
-import Window from "../../common/window";
+import Window from "../../common/Window";
 
 function Projects({onClose}: { onClose: () => void}) {
     const languages = ['TypeScript', 'JavaScript', 'Python', 'HTML/CSS', 'Tailwind CSS', 'SQL']

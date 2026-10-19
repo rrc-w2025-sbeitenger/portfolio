@@ -1,4 +1,4 @@
-import Window from "../../common/window";
+import Window from "../../common/Window";
 
 function Contact({onClose}: { onClose: () => void}) {
     return (

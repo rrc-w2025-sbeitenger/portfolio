@@ -1,4 +1,4 @@
-import Window from "../../common/window";
+import Window from "../../common/Window";
 
 function About({onClose}: { onClose: () => void}) {
     return (
@@ -44,11 +44,11 @@ function About({onClose}: { onClose: () => void}) {
                     <section className="space-y-4 border-t border-purple-100 pt-6">
                         <h2 className="text-2xl font-bold text-purple-700 sm:text-3xl">Hobbies</h2>
                         <ul className="flex flex-wrap gap-3">
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md">3D printing</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md">Hiking</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md">Star Wars</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md">Destiny</li>
-                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md">Modding consoles</li>
+                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">3D printing</li>
+                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Hiking</li>
+                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Star Wars</li>
+                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Destiny</li>
+                            <li className="bg-purple-50 px-4 py-2 text-purple-700 shadow-md hover:scale-90 transition-all">Modding consoles</li>
                         </ul>
                     </section>
                 </div>
