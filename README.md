@@ -35,16 +35,15 @@ I wanted the site to feel like a small desktop: visitors can open About, Project
 Install Node.js 22.12+ and npm before starting. Run these commands from the repository root:
 
 ```sh
-cd portfolio
 npm install
 npm run dev
 ```
 
-Open the local URL printed in the terminal. The site runs entirely in the browser; no backend or environment variables are required.
+Open the local URL printed in the terminal. The site runs entirely in the browser, no backend or environment variables are required.
 
 ## Available commands
 
-Run these commands inside the `portfolio` directory:
+Run these commands:
 
 | Command | Purpose |
 | --- | --- |
