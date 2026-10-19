@@ -2,11 +2,19 @@ import Window from "../../common/window";
 import Nav from "../../common/Nav"
 import Footer from "../../common/Footer";
 import ActivePage from "../../common/activePage";
+import {Howl} from 'howler';
 import type { Page } from "../../common/activePage";
 import { useState } from "react";
 
 function Home(){
     const [activePage, setActivePage] = useState<Page | null>(null);
+
+    const soundClick: Howl = new Howl({
+        src: ["/sounds/01_file_open.mp3"],
+        volume: 0.5,
+        html5: true,
+        preload: true
+    })
 
      return(
         <div className="flex min-h-svh items-center justify-center px-4 py-12 sm:px-8 sm:py-20">
@@ -22,8 +30,8 @@ function Home(){
 
                         <p className="mt-4 text-lg leading-relaxed text-zinc-600 sm:text-2xl">Developer, Video Editor, and Graphic Desginer</p>
 
-                        <div className="mt-12 w-full sm:mt-20">
-                            <Nav 
+                        <div className="mt-12 w-full sm:mt-20" onClick={() => soundClick.play()}>
+                            <Nav
                                 onAboutClick={() => setActivePage('about')}
                                 onProjectsClick={() => setActivePage('projects')}
                                 onContactClick={() => setActivePage('contact')}

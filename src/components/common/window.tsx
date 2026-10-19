@@ -1,5 +1,6 @@
 import { Rnd } from 'react-rnd';
 import type { ReactNode } from "react";
+import {Howl} from 'howler';
 
 type WindowProps = {
     title: string;
@@ -9,6 +10,12 @@ type WindowProps = {
 };
 
 function Window({title, children, onClose, draggable=true}: WindowProps){
+    const soundExit: Howl = new Howl({
+        src: ["/sounds/02_window_close.mp3"],
+        volume: 0.5,
+        html5: true,
+        preload: true
+    });
 
     const content = (
             <div className="overflow-hidden rounded-xl border border-zinc-400 bg-white shadow-[0_5px_0_rgba(0,0,0,0.15)]">
@@ -17,7 +24,10 @@ function Window({title, children, onClose, draggable=true}: WindowProps){
                     {onClose && (
                         <button
                             type="button"
-                            onClick={onClose}
+                            onClick={() => {
+                                onClose();
+                                soundExit.play();
+                            }}
                             className="absolute font-mono flex items-center justify-center text-white text-xl right-0 mr-6 duration-100 hover:scale-110 active:scale-80 z-10 hover:text-red-500"
                         >
                             [x]
